@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f28fdb0-1550-49d0-ad42-479746d6638c" name="Default Changelist" comment="" />
+    <list default="true" id="4f28fdb0-1550-49d0-ad42-479746d6638c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/snake_head.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snake_obj.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake_obj.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +19,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZkTWMra6p7xG3avP4CPxdncTUw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,7 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Alien Invasion/Alien.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Snake" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -78,33 +87,45 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585382161503">
+    <state x="285" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1585478179412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585382161503" />
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1585396349002">
+    <state x="285" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585478179412" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585472098889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585396349002" />
-    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1585396349001">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585472098889" />
+    <state width="1899" height="286" key="GridCell.Tab.0.bottom" timestamp="1585549094077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585396349001" />
-    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1585396349001">
+    <state width="1899" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585549094077" />
+    <state width="1899" height="286" key="GridCell.Tab.0.center" timestamp="1585549094077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585396349001" />
-    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1585396349001">
+    <state width="1899" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585549094077" />
+    <state width="1899" height="286" key="GridCell.Tab.0.left" timestamp="1585549094077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585396349001" />
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585466460808">
+    <state width="1899" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585549094077" />
+    <state width="1899" height="286" key="GridCell.Tab.0.right" timestamp="1585549094077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585466460808" />
-    <state x="953" y="0" width="974" height="1047" key="dock-window-1" timestamp="1585382601310">
+    <state width="1899" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585549094077" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585548346933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="953" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1585382601310" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585548346933" />
+    <state x="289" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585478171498">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="289" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585478171498" />
+    <state x="953" y="0" width="974" height="1047" key="dock-window-1" timestamp="1585480802552">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="953" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1585480802552" />
+    <state x="143" y="230" key="search.everywhere.popup" timestamp="1585478164418">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="143" y="230" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585478164418" />
   </component>
 </project>
