@@ -5,7 +5,8 @@ class Settings:
         self.screen_width = 800
         self.screen_height = 800
         self.bg_color = (255,255,255)
+        self.game_active = True
 
         #Snake settings
-        self.snake_speed = 25
-        self.scale = 25
+        self.snake_speed = 50
+        self.scale = 50

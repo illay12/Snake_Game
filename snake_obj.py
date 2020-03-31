@@ -10,13 +10,11 @@ class Snake(Sprite):
         self.settings = sk_game.settings
 
         #Set the diemnsions of the snake
-        self.width,self.height = 25, 25
+        self.width,self.height = 50,50
         self.snake_color = (255,0,0)
 
         #Build the snake's rect object.
-        self.rect = pygame.Rect(0, 0, self.width, self.height)
-        self.rect.topleft = self.screen_rect.topleft
-
+        self.rect = pygame.Rect(50, 50, self.width, self.height)
 
     def draw_Snake(self):
         """Draws the snake to the screen."""

@@ -10,7 +10,7 @@ class Food:
         self.settings = sk_game.settings
 
         # Set the dimensions of the food
-        self.width, self.height = 25, 25
+        self.width, self.height = 50,50
         self.food_color = (0, 255, 0)
 
         # Build the snake's rect object.

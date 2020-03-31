@@ -41,9 +41,10 @@ class SnakeGame:
         while True:
             self.clock.tick(self.FPS)
             self._check_events()
-            self._update_food()
-            self._update_snake()
-            self._update_screen()
+            if self.settings.game_active:
+                self._update_food()
+                self._update_snake()
+                self._update_screen()
 
 
 
@@ -87,6 +88,17 @@ class SnakeGame:
         self._update_snake_bits_positions()
         self._store_snake_head_pos()
         self.snake.update()
+        self._check_snake_head_collisions()
+
+    def _check_snake_head_collisions(self):
+        """Checks for snake collisions."""
+        self._check_snake_tail_collisions()
+
+    def _check_snake_tail_collisions(self):
+        """Checks wether the snake colided with itself."""
+        if pygame.sprite.spritecollideany(self.snake_head,self.snake):
+            self.settings.game_active = False
+            print("Test")
 
     def _store_snake_head_pos(self):
         """Stores the position of the snake's head after all bits have been updated."""
@@ -96,10 +108,18 @@ class SnakeGame:
 
     def _update_snake_bits_positions(self):
         """Updates the position of all snake bits."""
+        self._update_bits_coords()
+        self._update_rect_bits()
+
+    def _update_bits_coords(self):
+        """Updates the positions of all snake bits in the dict 'pozitii' """
         for snake_bit_count in range(len(self.snake),0,-1):
             self.pozitii['x'][snake_bit_count] = self.pozitii['x'][snake_bit_count-1]
             self.pozitii['y'][snake_bit_count] = self.pozitii['y'][snake_bit_count-1]
-        i=0
+
+    def _update_rect_bits(self):
+        """Takes the updated values from 'pozitii' and updates all the rect bits."""
+        i=1
         for snake_bit in self.snake:
             snake_bit.rect.x = self.pozitii['x'][i]
             snake_bit.rect.y = self.pozitii['y'][i]
@@ -108,6 +128,7 @@ class SnakeGame:
         print(self.pozitii['y'])
 
     def _check_snake_food_collision(self):
+        """Checks if the food was eaten and creates a new food and extends the snake by one bit."""
         if self.snake_head.rect.x == self.food.rect.x and self.snake_head.rect.y == self.food.rect.y:
             self._create_snake_bit()
             self._create_food()
@@ -131,9 +152,25 @@ class SnakeGame:
         #Find the amount of spaces available
         self.number_lines = self.settings.screen_width // self.settings.scale - 1
         self.number_rows = self.settings.screen_height // self.settings.scale - 1
+        while not self._get_food_pos():
+            pass
+        else:
+            self.food.rect.x = self.food_x
+            self.food.rect.y = self.food_y
 
-        self.food.rect.x = randint(1, self.number_lines) * self.settings.scale
-        self.food.rect.y = randint(1, self.number_rows) * self.settings.scale
+
+    def _get_food_pos(self):
+        """Finds a new spot for a food to be created."""
+        self.food_x = randint(1, self.number_lines) * self.settings.scale
+        self.food_y = randint(1, self.number_rows) * self.settings.scale
+        try:
+            if self.pozitii['x'].index(self.food_x) == self.pozitii['y'].index(self.food_y):
+                return False
+        except ValueError:
+            pass
+        else :
+            return False
+        return True
 
     def _reset_direction(self):
         """Resets the movement."""
