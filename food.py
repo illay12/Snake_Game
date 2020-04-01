@@ -1,10 +1,12 @@
 import pygame
+from pygame.sprite import Sprite
 
-
-class Food:
+class Food(Sprite):
     """A class representing the food."""
 
     def __init__(self, sk_game):
+        super().__init__()
+
         self.screen = sk_game.screen
         self.screen_rect = self.screen.get_rect()
         self.settings = sk_game.settings

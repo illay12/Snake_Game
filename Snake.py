@@ -1,5 +1,6 @@
 import sys
 from random import randint
+from time import sleep
 
 import pygame
 
@@ -7,6 +8,9 @@ from settings import Settings
 from snake_obj import Snake
 from food import Food
 from snake_head import Snake_head as SnakeHead
+from game_stats import GameStats
+from button import Button
+from scoreboard import ScoreBoard
 
 class SnakeGame:
     """Overall class to manage game assets and behaviour."""
@@ -29,22 +33,26 @@ class SnakeGame:
         self.pozitii['x'] = []
         self.pozitii['y'] = []
 
+        self.stats = GameStats(self)
+
         self.snake = pygame.sprite.Group()
         self.food = Food(self)
         self._create_food()
+        self._init_snake_head()
 
-        self.snake_head = SnakeHead(self)
-        self._add_bit_position(self.snake_head)
+        # Make a play button.
+        self.play_button = Button(self, "Play")
+        self.sb = ScoreBoard(self)
 
     def run_game(self):
         """Start the main loop."""
         while True:
             self.clock.tick(self.FPS)
             self._check_events()
-            if self.settings.game_active:
+            if self.stats.game_active:
                 self._update_food()
                 self._update_snake()
-                self._update_screen()
+            self._update_screen()
 
 
 
@@ -55,6 +63,19 @@ class SnakeGame:
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = pygame.mouse.get_pos()
+                self._check_play_button(mouse_pos)
+
+    def _check_play_button(self, mouse_pos):
+        """Start a new game when the player clicks Play."""
+        button_clicked = self.play_button.rect.collidepoint(mouse_pos)
+        if button_clicked:
+            # Reset game stats.
+            self.stats.game_active = True
+            # Hide the mouse cursor.
+            pygame.mouse.set_visible(False)
+
 
     def _check_keydown_events(self,event):
         """Checks for key presses."""
@@ -77,6 +98,9 @@ class SnakeGame:
             self.snake_head.moving_up = True
         elif event.key == pygame.K_q:
             sys.exit()
+        elif event.key == pygame.K_p:
+            self._start_game()
+            self.stats.game_active = True
 
     def _update_food(self):
         """Updates the food's image on the screen."""
@@ -90,6 +114,11 @@ class SnakeGame:
         self.snake.update()
         self._check_snake_head_collisions()
 
+    def _init_snake_head(self):
+        """Initializes the snake's head and its rect"""
+        self.snake_head = SnakeHead(self)
+        self._add_bit_position(self.snake_head)
+
     def _check_snake_head_collisions(self):
         """Checks for snake collisions."""
         self._check_snake_tail_collisions()
@@ -97,8 +126,32 @@ class SnakeGame:
     def _check_snake_tail_collisions(self):
         """Checks wether the snake colided with itself."""
         if pygame.sprite.spritecollideany(self.snake_head,self.snake):
-            self.settings.game_active = False
+            self._snake_hit()
             print("Test")
+
+    def _snake_hit(self):
+        """Restarts the game in case the player has hit something."""
+        self._remove_snake()
+        self._start_game()
+        sleep(0.5)
+        self.stats.game_active = False
+
+        pygame.mouse.set_visible(True)
+
+    def _start_game(self):
+        self._init_snake_head()
+        self._create_food()
+        self.stats.score = 0
+
+
+    def _remove_snake(self):
+        """Removes the snake from the screen."""
+        self.pozitii['x'].clear()
+        self.pozitii['y'].clear()
+        self.snake.empty()
+        self.snake_head.remove()
+        self.food.remove()
+
 
     def _store_snake_head_pos(self):
         """Stores the position of the snake's head after all bits have been updated."""
@@ -130,8 +183,15 @@ class SnakeGame:
     def _check_snake_food_collision(self):
         """Checks if the food was eaten and creates a new food and extends the snake by one bit."""
         if self.snake_head.rect.x == self.food.rect.x and self.snake_head.rect.y == self.food.rect.y:
+            self._increment_score()
             self._create_snake_bit()
             self._create_food()
+
+
+    def _increment_score(self):
+        self.stats.score += 1
+        self.sb.prep_score()
+        self.sb.check_high_score()
 
     def _create_snake_bit(self):
         """Makes the snake longer when food is eaten."""
@@ -187,6 +247,11 @@ class SnakeGame:
         for snake_bit in self.snake.sprites():
             snake_bit.draw_Snake()
         self.food.draw_food()
+
+        #Draw the play button if the game is inactive.
+        if not self.stats.game_active:
+            self.play_button.draw_button()
+            self.sb.show_score()
 
         pygame.display.flip()
 

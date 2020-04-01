@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f28fdb0-1550-49d0-ad42-479746d6638c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scoreboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/button.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food.py" beforeDir="false" afterPath="$PROJECT_DIR$/food.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snake_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake_head.py" afterDir="false" />
@@ -34,7 +36,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Alien Invasion/alien_invasion.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Alien Invasion/button.py" />
   </component>
   <component name="RunManager">
     <configuration name="Snake" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -94,8 +96,25 @@
       <option name="project" value="LOCAL" />
       <updated>1585549132976</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="version 3.0">
+      <created>1585638808711</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585638808711</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -112,53 +131,74 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="version 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 2.0" />
+    <MESSAGE value="version 3.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 3.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="285" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1585478179412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="285" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585478179412" />
-    <state x="614" y="115" key="CommitChangelistDialog2" timestamp="1585549131595">
+    <state x="614" y="115" key="CommitChangelistDialog2" timestamp="1585728670491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585549131595" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585553927727">
+    <state x="614" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585728670491" />
+    <state x="100" y="100" width="774" height="840" key="DiffContextDialog" timestamp="1585639477913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585553927727" />
-    <state width="936" height="283" key="GridCell.Tab.0.bottom" timestamp="1585638678566">
+    <state x="100" y="100" width="774" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585639477913" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585721000278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585638678566" />
-    <state width="936" height="283" key="GridCell.Tab.0.center" timestamp="1585638678566">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585721000278" />
+    <state width="936" height="286" key="GridCell.Tab.0.bottom" timestamp="1585728672077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585638678566" />
-    <state width="936" height="283" key="GridCell.Tab.0.left" timestamp="1585638678566">
+    <state width="936" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585728672077" />
+    <state width="936" height="286" key="GridCell.Tab.0.center" timestamp="1585728672077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585638678566" />
-    <state width="936" height="283" key="GridCell.Tab.0.right" timestamp="1585638678566">
+    <state width="936" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585728672077" />
+    <state width="936" height="286" key="GridCell.Tab.0.left" timestamp="1585728672077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585638678566" />
-    <state x="750" y="231" key="RollbackChangesDialog" timestamp="1585550142547">
+    <state width="936" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585728672077" />
+    <state width="936" height="286" key="GridCell.Tab.0.right" timestamp="1585728672077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="750" y="231" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585550142547" />
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585634985576">
+    <state width="936" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585728672077" />
+    <state width="936" height="347" key="GridCell.Tab.1.bottom" timestamp="1585726722137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585634985576" />
+    <state width="936" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585726722137" />
+    <state width="936" height="347" key="GridCell.Tab.1.center" timestamp="1585726722137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585726722137" />
+    <state width="936" height="347" key="GridCell.Tab.1.left" timestamp="1585726722137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585726722137" />
+    <state width="936" height="347" key="GridCell.Tab.1.right" timestamp="1585726722137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585726722137" />
+    <state x="750" y="231" key="RollbackChangesDialog" timestamp="1585639447511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="750" y="231" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585639447511" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585720777436">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585720777436" />
     <state x="289" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585478171498">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="289" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585478171498" />
-    <state x="953" y="0" width="974" height="1047" key="dock-window-1" timestamp="1585635700435">
+    <state x="953" y="0" width="974" height="1047" key="dock-window-1" timestamp="1585725672376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="953" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1585635700435" />
+    <state x="953" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1585725672376" />
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1585551031468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
